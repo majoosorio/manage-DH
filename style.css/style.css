@@ -1,15 +1,18 @@
+/*
+------------ SETUP ------------
+*/
+
 :root {
   --primary-color: #f3603c;
-  --lighter-primary-color: #f1a996;
+  --light-primary-color: #f1c4b7;
+  --lighter-primary-color: #f9ece8;
   --secondary-color: #1e1e26;
   --text-color: #b9b9c1;
   --second-text-color: #b3b2b7;
-
   --primary-black: #232c50;
   --secondary-black: #242e52;
   --third-black: #323851;
   --forth-black: #232851;
-
   --primary-white: #ffffff;
   --secondary-white: #fafafa;
 }
@@ -29,6 +32,32 @@ body {
   font-size: 1.6rem;
 }
 
+/*
+------------ COMMONS ------------
+*/
+
+button {
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--primary-white);
+  box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--primary-white);
+  color: var(--primary-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/*
+------------ HEADER ------------
+*/
+
 header {
   width: 100%;
   display: flex;
@@ -44,6 +73,20 @@ header {
 nav {
   display: none;
 }
+
+.menu-link {
+  color: var(--secondary-black);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+/*
+------------ HERO ------------
+*/
 
 .graphics {
   width: 100%;
@@ -69,32 +112,9 @@ nav {
   text-align: center;
 }
 
-button {
-  border-radius: 5rem;
-  padding: 1.2rem 3rem;
-  border: none;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--primary-white);
-  box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
-}
-
-.btn-secondary {
-  background-color: var(--primary-white);
-  color: var(--primary-color);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-}
-
-.menu-link {
-  color: var(--secondary-black);
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-#menu-btn {
-  display: none;
-}
+/*
+------------ BENEFITS SECTION ------------
+*/
 
 .text-about-manage-block {
   display: flex;
@@ -115,24 +135,63 @@ button {
 }
 
 .product-benefits-list {
-  display: list-item;
+  list-style: none;
+  padding: 1rem 0 2rem 2rem;
+  counter-reset: my-awesome-counter;
 }
 
 .product-benefits-list li {
+  counter-increment: my-awesome-counter;
+  display: grid;
+  grid-template-columns: 15% 85%;
   color: var(--second-text-color);
+}
+
+.product-benefits-list p {
+  grid-column: 1 / span 2;
+  padding: 2rem;
 }
 
 .product-benefits-list h3 {
   color: var(--third-black);
   text-align: center;
+  background-color: var(--lighter-primary-color);
+  font-size: 1.6rem;
+  margin-left: -2rem;
+  padding: 1rem;
+  width: 100%;
+}
+.product-benefits-list li::before {
+  content: "0" counter(my-awesome-counter);
+  border-radius: 50rem;
+  padding: 1rem 1.5rem;
+  justify-self: center;
+  background-color: var(--primary-color);
+  color: var(--primary-white);
+  z-index: 10;
+}
+
+/*
+------------ TESTIMONIALS ------------
+*/
+
+.title-testimonials-block {
+  text-align: center;
+  color: var(--secondary-black);
+  margin: 2.5rem;
+  padding: 2rem 0;
+  font-size: 2.5rem;
 }
 
 .people-container {
   background-color: var(--secondary-white);
   width: 100%;
-  height: 21.9rem;
+  height: 30.9rem;
   position: relative;
   display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
 }
 .profile {
   width: 30%;
@@ -142,20 +201,36 @@ button {
   max-width: 35rem;
 }
 
+.people-container p {
+  text-align: center;
+  padding: 0.5;
+  font-size: 1.6rem;
+}
+
+/*
+------------ CTA SECTION ------------
+*/
+
 .pre-footer {
   background-color: var(--primary-color);
   width: 100%;
   height: 22.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-white);
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
 }
+
+/*
+------------ FOOTER ------------
+*/
 
 footer {
   background-color: #1e1e26;
   width: 100%;
   height: 24.7rem;
   color: #ffffff;
-}
-
-.product-benefits-list::after {
-  background-color: var(--primary-color);
-  color: var(--primary-white);
 }

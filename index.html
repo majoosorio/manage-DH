@@ -7,13 +7,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0 minimum-scale=1"
     />
+    <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./style/tablet.css"
+      media="screen and (min-width:760px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/desktop.css"
+      media="screen and (min-width:1200px)"
+    />
     <title>Manage ✨</title>
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   </head>
@@ -25,7 +35,11 @@
         alt=""
       />
       <img class="logo" src="./images/logo copy.svg" alt="Logo" />
-      <img src="./images/icon-hamburger.svg" alt="Hamburger menu icon" />
+      <img
+        id="icon-burger"
+        src="./images/icon-hamburger.svg"
+        alt="Hamburger menu icon"
+      />
       <nav>
         <ul type="none">
           <li><a class="menu-link" href="#">Pricing</a></li>
@@ -43,7 +57,7 @@
       />
     </header>
     <main>
-      <section>
+      <section id="hero">
         <div>
           <img
             class="graphics"
@@ -62,7 +76,7 @@
           <button class="btn-primary">Get Started</button>
         </div>
       </section>
-      <section>
+      <section id="benefits-section">
         <div class="text-about-manage-block">
           <h2>What´s different about Manage?</h2>
           <p>
@@ -103,37 +117,44 @@
       </section>
       <section id="testimonials">
         <h2 class="title-testimonials-block">What they´ve said</h2>
-        <div class="people-container">
-          <img class="profile" src="./images/avatar-anisha.png" alt="Anisha" />
-          <h3>Ali Bravo</h3>
-          <p>
-            “Manage has supercharged our team´s workflow. The ability to
-            maintain visibility on larger milestones at all times keeps everyone
-            motivated.”
-          </p>
+        <div class="testimonials-container">
+          <div class="people-container">
+            <img
+              class="profile"
+              src="./images/avatar-anisha.png"
+              alt="Anisha"
+            />
+            <h3>Ali Bravo</h3>
+            <p>
+              “Manage has supercharged our team´s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+          <div class="people-container" id="mobile-profile">
+            <img class="profile" src="./images/avatar-ali.png" alt="Ali" />
+            <h3>Ali Bravo</h3>
+            <p>
+              “We have been able to cancel so many other subscriptions since
+              using manage. There ir no more cross-channel confusion and
+              everyone is much more focused.”
+            </p>
+          </div>
+          <div class="people-container">
+            <img
+              class="profile"
+              src="./images/avatar-richard.png"
+              alt="Richard"
+            />
+            <h3>Ali Bravo</h3>
+            <p>
+              “Manage allows us to provide structure and process. It keeps us
+              organized and focused. I can´t stop recommending them to everyone
+              i talk to!”
+            </p>
+          </div>
         </div>
-        <div class="people-container" id="mobile-profile">
-          <img class="profile" src="./images/avatar-ali.png" alt="Ali" />
-          <h3>Ali Bravo</h3>
-          <p>
-            “We have been able to cancel so many other subscriptions since using
-            manage. There ir no more cross-channel confusion and everyone is
-            much more focused.”
-          </p>
-        </div>
-        <div class="people-container">
-          <img
-            class="profile"
-            src="./images/avatar-richard.png"
-            alt="Richard"
-          />
-          <h3>Ali Bravo</h3>
-          <p>
-            “Manage allows us to provide structure and process. It keeps us
-            organized and focused. I can´t stop recommending them to everyone i
-            talk to!”
-          </p>
-        </div>
+
         <div class="dots-container">
           <div class="dots"></div>
           <div class="dots" id="full-color-dot"></div>

@@ -67,7 +67,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 1.5rem;
+  padding: 4.5rem 2.5rem;
+}
+
+.bg-header {
+  width: 50rem;
+  z-index: -5;
+  right: -15rem;
+  top: -10rem;
 }
 
 .logo {

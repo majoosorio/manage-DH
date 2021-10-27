@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,6 +36,11 @@
         </ul>
       </nav>
       <button class="btn-primary" id="menu-btn">Get Started</button>
+      <img
+        class="bg-items bg-hero"
+        src="./images/bg-tablet-pattern.svg"
+        alt=""
+      />
     </header>
     <main>
       <section>
@@ -149,43 +157,38 @@
       </section>
     </main>
     <footer>
+      <form action="action_page.html">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Update in your inbox..."
+          required
+        />
+        <button class="btn-primary">Go</button>
+      </form>
+      <div class="footer-nav-container">
+        <ul id="footer-nav" type="none">
+          <li><a href="#"></a>Home</li>
+          <li><a href="#"></a>Pricing</li>
+          <li><a href="#"></a>Products</li>
+          <li><a href="#"></a>About Us</li>
+          <li><a href="#"></a>Careers</li>
+          <li><a href="#"></a>Community</li>
+          <li><a href="#"></a>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="social-container">
+        <img src="./images/icon-facebook.svg" alt="Facebook" />
+        <img src="./images/icon-youtube.svg" alt="Youtube" />
+        <img src="./images/icon-twitter.svg" alt="Twtter" />
+        <img src="./images/icon-pinterest.svg" alt="Pinterest" />
+        <img src="./images/icon-instagram.svg" alt="Instagram" />
+      </div>
       <div>
         <img src="./images/Logo_white.svg" alt="Logo" />
       </div>
-      <div>
-        <img src="./images/icon-facebook.svg" alt="Facebook" />
-        <img src="./images/icon-instagram.svg" alt="Instagram" />
-        <img src="./images/icon-pinterest.svg" alt="Pinterest" />
-        <img src="./images/icon-twitter.svg" alt="Twtter" />
-        <img src="./images/icon-youtube.svg" alt="Youtube" />
-      </div>
-      <section>
-        <ul type="none">
-          <li><a href="#"></a> Home</li>
-          <li><a href="#"></a> Pricing</li>
-          <li><a href="#"></a> Products</li>
-          <li><a href="#"></a> About Us</li>
-        </ul>
-      </section>
-      <section>
-        <ul>
-          <li><a href="#"></a> Careers</li>
-          <li><a href="#"></a> Community</li>
-          <li><a href="#"></a> Privacy Policy</li>
-        </ul>
-      </section>
-      <form action="action_page.html"></form>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Update in your inbox..."
-        required
-      />
-      <div>
-        <button class="btn-primary">Go</button>
-      </div>
-      <div>
+      <div id="copyright-text">
         <p>Copyright 2020. All Rights Reserved</p>
       </div>
     </footer>

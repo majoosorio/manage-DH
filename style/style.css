@@ -52,6 +52,10 @@ button {
   box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
 }
 
+.btn-primary:hover {
+  background-color: var(--light-primary-color);
+}
+
 .btn-secondary {
   background-color: var(--primary-white);
   color: var(--primary-color);
@@ -103,8 +107,14 @@ nav {
 ------------ HERO ------------
 */
 
+.graphics-container {
+  display: flex;
+  justify-content: center;
+}
+
 .graphics {
   width: 100%;
+  max-width: 40rem;
 }
 
 .hero-text-block {
@@ -293,6 +303,7 @@ nav {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  padding: 0 2rem;
 }
 
 .cta-container p {
@@ -306,6 +317,10 @@ nav {
 
 .bg-cta {
   left: 0;
+}
+
+.color-extension {
+  display: none;
 }
 
 /*

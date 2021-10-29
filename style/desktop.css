@@ -39,28 +39,8 @@ nav ul {
 ------------ HERO ------------
 */
 
-#hero {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
-.hero-text-block {
-  align-items: flex-start;
-  justify-content: center;
-  width: 50rem;
-  padding: 0 2.5rem;
-}
-
 .main-title {
-  text-align: left;
   font-size: 5rem;
-}
-
-.hero-text {
-  width: 75%;
-  text-align: left;
-  padding: 0 0 2rem;
 }
 
 .bg-hero {
@@ -69,9 +49,21 @@ nav ul {
   top: 75rem;
 }
 
+.graphics-container {
+  align-items: unset;
+}
+
+.graphics {
+  max-width: 60rem;
+}
+
 /*
 ------------ BENEFITS SECTION ------------
 */
+
+.product-benefits-list {
+  width: unset;
+}
 
 .text-about-manage-block {
   padding: 0 2.5rem 0 4rem;
@@ -104,9 +96,6 @@ nav ul {
   width: 50%;
 }
 
-.product-benefits-list h3 {
-  background-color: unset;
-}
 .product-benefits-list p {
   right: -6rem;
 }
@@ -114,24 +103,13 @@ nav ul {
 /*
 ------------ TESTIMONIALS ------------
 */
+
+.people-container p {
+  font-size: 1.6rem;
+}
+
 #testimonials {
   margin: 5rem 0;
-}
-.text-about-manage-block h2 {
-  font-weight: 700;
-}
-
-.testimonials-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.people-container {
-  display: flex;
-}
-
-.dots-container {
-  display: none;
 }
 
 /*
@@ -141,10 +119,26 @@ nav ul {
 .cta-container {
   flex-direction: row;
   justify-content: space-evenly;
+  height: 22rem;
 }
 
 .bg-cta {
-  display: none;
+  content: url("../images/bg-simplify-section-desktop.svg");
+  width: 105rem;
+  bottom: 0;
+  transform: translate(10%, 0);
+}
+
+.color-extension {
+  width: 100vw;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.color-extension-cta {
+  height: 22rem;
+  background-color: var(--primary-color);
 }
 
 /*
@@ -152,5 +146,55 @@ nav ul {
 */
 
 footer {
-  flex-direction: row-reverse;
+  height: 25rem;
+  display: grid;
+  grid-template: repeat(2, 1fr) / 20% 30% 20% 30%;
+  padding: 0 1rem;
+}
+
+.color-extension-footer {
+  height: 25rem;
+  background-color: var(--secondary-color);
+  z-index: -5;
+}
+
+#footer-logo-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.social-container {
+  gap: 1.5rem;
+}
+
+.social-container img {
+  width: 2rem;
+}
+
+.footer-nav-container {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+#copyright-text p {
+  text-align: right;
+}
+
+footer form {
+  justify-self: right;
+}
+
+#email {
+  margin-right: 1rem;
+}
+
+/*
+------------ MEDIA QUERIES ------------
+*/
+
+@media only screen and (min-width: 1800px) {
+  .bg-hero,
+  .bg-header {
+    display: none;
+  }
 }

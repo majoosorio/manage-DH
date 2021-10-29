@@ -167,7 +167,7 @@ footer {
   gap: 1.5rem;
 }
 
-.social-container img {
+.social-container svg {
   width: 2rem;
 }
 
@@ -186,6 +186,10 @@ footer form {
 
 #email {
   margin-right: 1rem;
+}
+
+#footer-nav {
+  width: 80%;
 }
 
 /*

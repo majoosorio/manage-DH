@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #f3603c;
-  --light-primary-color: #f1c4b7;
+  --light-primary-color: #ff987c;
   --lighter-primary-color: #f9ece8;
   --secondary-color: #1e1e26;
   --text-color: #b9b9c1;
@@ -50,6 +50,7 @@ button {
   background-color: var(--primary-color);
   color: var(--primary-white);
   box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -59,7 +60,13 @@ button {
 .btn-secondary {
   background-color: var(--primary-white);
   color: var(--primary-color);
+  cursor: pointer;
+  z-index: 2;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary:hover {
+  color: var(--light-primary-color);
 }
 
 .bg-items {
@@ -97,6 +104,11 @@ nav {
   color: var(--secondary-black);
   text-decoration: none;
   font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.menu-link:hover {
+  color: var(--second-text-color);
 }
 
 #menu-btn {
@@ -315,6 +327,10 @@ nav {
   line-height: 1.2;
 }
 
+div .bg-cta {
+  z-index: 0;
+}
+
 .bg-cta {
   left: 0;
 }
@@ -358,13 +374,27 @@ footer {
   gap: 1.5rem 4rem;
 }
 
+#footer-nav li a {
+  color: var(--primary-white);
+  text-decoration: none;
+}
+
+#footer-nav li a:hover {
+  color: var(--primary-color);
+}
+
 .social-container {
   display: flex;
   gap: 4rem;
 }
 
-.social-container img {
+.social-container svg {
   width: 3rem;
+  cursor: pointer;
+}
+
+.social-container svg:hover path {
+  fill: var(--primary-color);
 }
 
 #copyright-text {

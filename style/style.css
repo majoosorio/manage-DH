@@ -61,7 +61,6 @@ button {
   background-color: var(--primary-white);
   color: var(--primary-color);
   cursor: pointer;
-  z-index: 2;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -327,12 +326,13 @@ nav {
   line-height: 1.2;
 }
 
-div .bg-cta {
-  z-index: 0;
+.cta-btn-container {
+  z-index: 2;
 }
 
 .bg-cta {
   left: 0;
+  z-index: 0;
 }
 
 .color-extension {
